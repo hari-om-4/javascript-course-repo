@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Learning</title>
+</head>
+<body>
+    <h3>Select Timezone:</h3>
+    <form>
+        <input type="radio" id="est" name="timezone" value="est">
+        <label for="est">Eastern Standard Time</label><br>
+        <input type="radio" id="cst" name="timezone" value="cst">
+        <label for="cst">Central Standard Time</label><br>
+        <input type="radio" id="mst" name="timezone" value="mst">
+        <label for="mst">Mountain Standard Time</label><br>
+        <input type="radio" id="pst" name="timezone" value="pst">
+        <label for="pst">Pacific Standard Time</label><br>
+        <input type="radio" id="ist" name="timezone" value="ist">
+        <label for="ist">Indian Standard Time</label><br>
+        <button type="button" value="Submit" onclick="validateForm()">Submit</button>
+    </form>
+    <script type="text/javascript">
+        function validateForm(){
+            var radioButtons = document.getElementsByName("timezone");
+            var selectedValue = radioButtons[0].value;
+            for (var i = 0; i < radioButtons.length; i++){
+                if (radioButtons[i].checked == true) {
+                    selectedValue = radioButtons[i].value;
+                }
+            }
+            document.getElementById("unique").innerHTML = selectedValue;
+        }
+    </script>
+    <div id="unique"></div>
+</body>
+</html>
