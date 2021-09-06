@@ -21,6 +21,11 @@
         <label for="ist">Indian Standard Time</label><br>
         <button type="button" value="Submit" onclick="validateForm()">Submit</button>
     </form>
+    <div id="unique"></div><br>
+    <div id="printclock"></div>
+
+
+
     <script type="text/javascript">
         function validateForm(){
             var radioButtons = document.getElementsByName("timezone");
@@ -32,7 +37,36 @@
             }
             document.getElementById("unique").innerHTML = selectedValue;
         }
+
+        function localMachineTime(){
+            var day = new Date();
+            var hour = day.getHours();
+            var minute = day.getMinutes();
+            var second = day.getSeconds();
+            var session = "AM";
+            if(hour > 12){
+                hour -= 12;
+                session = "PM";
+            }
+            if(hour == 0){
+                hour = 12;
+                session = "AM"
+            }
+            hour = hour < 10 ? "0" + hour : hour;
+            minute = minute < 10 ? "0" + minute : minute;
+            second = second < 10 ? "0" + second : second;
+            var time = hour + ":" + minute + ":" + second + session;
+            document.getElementById("printclock").innerHTML = time;
+            setTimeout( () => {
+                localMachineTime();
+            }, 1000);
+            
+        }
+        localMachineTime();
+
+        
     </script>
-    <div id="unique"></div>
+        
+    
 </body>
 </html>
