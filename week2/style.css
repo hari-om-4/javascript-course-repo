@@ -7,7 +7,17 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: x-large;
 }
-#printclock, #unique{
+.clock{
     margin: 50px;
-    font-size: xx-large;
+    width: 500px;
+    height: 200px;
+    background-color: black;
+    border: skyblue;
+    border-style: solid;
+    border-width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 60px;
 }

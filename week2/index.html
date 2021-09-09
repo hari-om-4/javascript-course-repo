@@ -26,7 +26,7 @@
         <button type="button" value="Submit" onclick="validateForm()">Submit</button>
     </form>
     <div id="unique"></div><br>
-    <div id="printclock"></div>
+    <div id="printclock" class="clock"></div>
 
 
 
@@ -102,7 +102,7 @@
             hour = hour < 10 ? "0" + hour : hour;
             minute = minute < 10 ? "0" + minute : minute;
             second = second < 10 ? "0" + second : second;
-            var time = hour + ":" + minute + ":" + second + session;
+            var time = hour + ":" + minute + ":" + second + " " + session;
             document.getElementById("printclock").innerHTML = time;
             setTimeout( () => {
                 localMachineTime();
