@@ -8,23 +8,24 @@
     <title>JavaScript Learning</title>
 </head>
 <body>
-    
-    <form>
-        <h3>Select Timezone:</h3>
-        <input type="radio" id="est" name="timezone" value="est">
-        <label for="est">Eastern Standard Time</label><br>
-        <input type="radio" id="cst" name="timezone" value="cst">
-        <label for="cst">Central Standard Time</label><br>
-        <input type="radio" id="mst" name="timezone" value="mst">
-        <label for="mst">Mountain Standard Time</label><br>
-        <input type="radio" id="pst" name="timezone" value="pst">
-        <label for="pst">Pacific Standard Time</label><br>
-        <input type="radio" id="ist" name="timezone" value="ist">
-        <label for="ist">Indian Standard Time</label><br>
-        <input type="radio" id="jst" name="timezone" value="jst">
-        <label for="jst">Japan Standard Time</label><br>
-        <button type="button" value="Submit" onclick="validateForm()">Submit</button>
-    </form>
+    <div class="timezones">
+        <form>
+            <h3>Select Timezone:</h3>
+            <input type="radio" id="est" name="timezone" value="est">
+            <label for="est">Eastern Standard Time</label><br>
+            <input type="radio" id="cst" name="timezone" value="cst">
+            <label for="cst">Central Standard Time</label><br>
+            <input type="radio" id="mst" name="timezone" value="mst">
+            <label for="mst">Mountain Standard Time</label><br>
+            <input type="radio" id="pst" name="timezone" value="pst">
+            <label for="pst">Pacific Standard Time</label><br>
+            <input type="radio" id="ist" name="timezone" value="ist">
+            <label for="ist">Indian Standard Time</label><br>
+            <input type="radio" id="jst" name="timezone" value="jst">
+            <label for="jst">Japan Standard Time</label><br>
+            <button type="button" value="Submit" onclick="validateForm()">Submit</button>
+        </form>
+    </div>  
     <div id="unique"></div><br>
     <div id="printclock" class="clock"></div>
 
