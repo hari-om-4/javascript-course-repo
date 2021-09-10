@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: gray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+}
+/* .clock{
+    margin: 50px;
+    width: 500px;
+    height: 200px;
+    background-color: black;
+    border: skyblue;
+    border-style: solid;
+    border-width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 60px;
+} */
+.timezones{
+    font-family: monospace;
+    font-size: 30px;
+    color: white;
+}
