@@ -1,6 +1,9 @@
 var offset_hour = 0;
 var offset_minute = 0;
-
+const hoursHand = document.querySelector('[data-hour-hand]');
+const minutesHand = document.querySelector('[data-minute-hand]');
+const secondsHand = document.querySelector('[data-second-hand]');
+setInterval(showtime, 1000);
 function validateForm() {
     var radioButtons = document.getElementsByName("timezone");
     var selectedValue = radioButtons[0].value;
@@ -37,7 +40,6 @@ function validateForm() {
         default: offset_hour = 0; offset_minute = 0;
             break;
     }
-    document.getElementById("unique").innerHTML = selectedValue;
 }
 
 function localMachineTime() {
@@ -52,31 +54,45 @@ function localMachineTime() {
 
 }
 function showtime() {
-    if (minute > 60) {
-        hour += 1;
-        minute -= 60;
-    }
-    if (minute < 0) {
-        hour -= 1;
-        minute += 60;
-    }
-    if (hour > 12) {
-        hour -= 12;
-        session = "PM";
-        if (hour > 12) {
-            hour -= 12;
-            session = "AM";
-        }
-    }
-    if (hour == 0) {
-        hour = 12;
-        session = "AM"
-    }
-    hour = hour < 10 ? "0" + hour : hour;
-    minute = minute < 10 ? "0" + minute : minute;
-    second = second < 10 ? "0" + second : second;
-    var time = hour + ":" + minute + ":" + second + " " + session;
-    document.getElementById("printclock").innerHTML = time;
+    const day = new Date();
+    const secondsRatio = day.getSeconds()/60;
+    const minutesRatio = (day.getMinutes() + secondsRatio + offset_minute) / 60;
+    const hoursRatio = (day.getHours() + minutesRatio + offset_hour) / 12;
+    setRotation(secondsHand, secondsRatio);
+    setRotation(minutesHand, minutesRatio);
+    setRotation(hoursHand, hoursRatio);
+
+    
+    // if (minute > 60) {
+    //     hour += 1;
+    //     minute -= 60;
+    // }
+    // if (minute < 0) {
+    //     hour -= 1;
+    //     minute += 60;
+    // }
+    // if (hour > 12) {
+    //     hour -= 12;
+    //     session = "PM";
+    //     if (hour > 12) {
+    //         hour -= 12;
+    //         session = "AM";
+    //     }
+    // }
+    // if (hour == 0) {
+    //     hour = 12;
+    //     session = "AM"
+    // }
+    // hour = hour < 10 ? "0" + hour : hour;
+    // minute = minute < 10 ? "0" + minute : minute;
+    // second = second < 10 ? "0" + second : second;
+    // var time = hour + ":" + minute + ":" + second + " " + session;
+    // document.getElementById("printclock").innerHTML = time;
 }
-localMachineTime();
+
+function setRotation(element, rotationRatio){
+    element.style.setProperty(`--rotation`, rotationRatio * 360);
+}
+
+showtime();
 
