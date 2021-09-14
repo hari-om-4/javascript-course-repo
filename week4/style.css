@@ -1,0 +1,124 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: gray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+}
+.clock{
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50%;
+    border: solid;
+    position: relative;
+} 
+.clock::after{
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+.clock .number{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: black;
+    text-align: center;
+    --rotation: 0;
+    transform: rotate(var(--rotation));
+}
+.clock .number1{
+    --rotation: 30deg;
+}
+.clock .number2{
+    --rotation: 60deg;
+}
+.clock .number3{
+    --rotation: 90deg;
+}
+.clock .number4{
+    --rotation: 120deg;
+}
+.clock .number5{
+    --rotation: 150deg;
+}
+.clock .number6{
+    --rotation: 180deg;
+}
+.clock .number7{
+    --rotation: 210deg;
+}
+.clock .number8{
+    --rotation: 240deg;
+}
+.clock .number9{
+    --rotation: 270deg;
+}
+.clock .number10{
+    --rotation: 300deg;
+}
+.clock .number11{
+    --rotation: 330deg;
+}
+.clock .hand{
+    bottom: 50%;
+    left: 50%;
+    position: absolute;
+    height: 40%;
+    width: 12px;
+    background-color: black;
+    border: white;
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    --rotation: 30;
+    transform: translate(-50%, 0) rotate(calc(var(--rotation) * 1deg));
+    transform-origin: bottom;
+    
+}
+.clock .hand.second{
+    height: 43%;
+    width: 2px;
+    background-color: red;
+    z-index: 12;
+}
+.clock .hand.minute{
+    width: 8px;
+    z-index: 11;
+}
+.clock .hand.hour{
+    height: 35%;
+    z-index: 11;
+}
+
+.timezones{
+    font-family: monospace;
+    font-size: 30px;
+    color: white;
+    margin: 50px;
+}
+
+.digital{
+    margin: 50px;
+    width: 400px;
+    height: 150px;
+    background-color: black;
+    border: skyblue;
+    border-style: solid;
+    border-width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 60px;
+}
