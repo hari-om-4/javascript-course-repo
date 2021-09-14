@@ -43,17 +43,6 @@ function validateForm() {
     }
 }
 
-function localMachineTime() {
-    var day = new Date();
-    var hour = day.getHours() + offset_hour;
-    var minute = day.getMinutes() + offset_minute;
-    var second = day.getSeconds();
-    var session = "AM";
-    setTimeout(() => {
-        localMachineTime();
-    }, 1000);
-
-}
 function showtime() {
     const day = new Date();
     const secondsRatio = day.getSeconds() / 60;

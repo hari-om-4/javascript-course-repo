@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <script defer src="script.js"></script>
     <title>JavaScript Learning</title>
 </head>
+
 <body>
     <div class="timezones">
         <form>
@@ -26,7 +28,13 @@
             <label for="jst">Japan Standard Time</label><br>
             <button type="button" value="Submit" onclick="validateForm()">Submit</button>
         </form>
-    </div>  
+    </div>
+    <div class="view">
+        <input type="radio" id="selectAnalog" name="timezone" value="selectAnalog">
+        <label for="selectAnalog">Analog</label><br>
+        <input type="radio" id="selectDigital" name="timezone" value="selectDigital">
+        <label for="selectDigital">Digital</label><br>
+    </div>
     <div class="clock">
         <div class="number number1">1</div>
         <div class="number number2">2</div>
@@ -45,10 +53,11 @@
         <div class="hand second" data-second-hand></div>
     </div>
     <div class="digital" id="digital clock">
-        
+
     </div>
-    
-        
-    
+
+
+
 </body>
+
 </html>
