@@ -92,3 +92,16 @@ function digital_clock() {
 }
 digital_clock();
 
+function setAnalog(){
+    var analog = document.getElementById("clock");
+    analog.style.display = "flex";
+    var digital = document.getElementById("digital clock");
+    digital.style.display = "none";
+}
+setAnalog();
+function setDigital(){
+    var analog = document.getElementById("clock");
+    var digital = document.getElementById("digital clock");
+    digital.style.display = "flex";
+    analog.style.display = "none";
+}
