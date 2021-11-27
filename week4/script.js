@@ -6,13 +6,7 @@ const secondsHand = document.querySelector('[data-second-hand]');
 setInterval(showtime, 1000);
 setInterval(digital_clock, 1000);
 function validateForm() {
-    var radioButtons = document.getElementsByName("timezone");
-    var selectedValue = radioButtons[0].value;
-    for (var i = 0; i < radioButtons.length; i++) {
-        if (radioButtons[i].checked == true) {
-            selectedValue = radioButtons[i].value;
-        }
-    }
+    var selectedValue = document.getElementById("timezones").value;
     switch (selectedValue) {
         case "est":
             offset_hour = -9;

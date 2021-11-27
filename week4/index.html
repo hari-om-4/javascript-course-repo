@@ -11,53 +11,51 @@
 </head>
 
 <body>
-    <div class="timezones">
-        <form>
-            <h3>Select Timezone:</h3>
-            <input type="radio" id="est" name="timezone" value="est">
-            <label for="est">Eastern Standard Time</label><br>
-            <input type="radio" id="cst" name="timezone" value="cst">
-            <label for="cst">Central Standard Time</label><br>
-            <input type="radio" id="mst" name="timezone" value="mst">
-            <label for="mst">Mountain Standard Time</label><br>
-            <input type="radio" id="pst" name="timezone" value="pst">
-            <label for="pst">Pacific Standard Time</label><br>
-            <input type="radio" id="ist" name="timezone" value="ist">
-            <label for="ist">Indian Standard Time</label><br>
-            <input type="radio" id="jst" name="timezone" value="jst">
-            <label for="jst">Japan Standard Time</label><br>
-            <button type="button" value="Submit" onclick="validateForm()">Submit</button>
-        </form>
-    </div>
-    <div class="view">
-        <input type="radio" id="selectAnalog" name="timezone" value="selectAnalog" onclick="setAnalog()" checked>
-        <label for="selectAnalog">Analog</label><br>
-        <input type="radio" id="selectDigital" name="timezone" value="selectDigital" onclick="setDigital()">
-        <label for="selectDigital">Digital</label><br>
-    </div>
-    <div class="clock" id="clock">
-        <div class="number number1">1</div>
-        <div class="number number2">2</div>
-        <div class="number number3">3</div>
-        <div class="number number4">4</div>
-        <div class="number number5">5</div>
-        <div class="number number6">6</div>
-        <div class="number number7">7</div>
-        <div class="number number8">8</div>
-        <div class="number number9">9</div>
-        <div class="number number10">10</div>
-        <div class="number number11">11</div>
-        <div class="number number12">12</div>
-        <div class="hand hour" data-hour-hand></div>
-        <div class="hand minute" data-minute-hand></div>
-        <div class="hand second" data-second-hand></div>
-    </div>
-    <div class="digital" id="digital clock">
+    <header class="header">
+        <h1>World Clock</h1>
+    </header>
 
-    </div>
+    <div class="content">
 
+        <div class="timezones">
+            <label for="timezones">
+                <h3>Select Timezone:</h3>
+            </label>
+            <select id="timezones" onchange="validateForm()">
+                <option name="timezone" value="est">Eastern Standard Time</option>
+                <option name="timezone" value="cst">Central Standard Time</option>
+                <option name="timezone" value="mst">Mountain Standard Time</option>
+                <option name="timezone" value="pst">Pacific Standard Time</option>
+                <option name="timezone" value="ist">Indian Standard Time</option>
+                <option name="timezone" value="jst">Japan Standard Time</option>
+            </select>
+        </div>
+        <div class="view">
+            <input type="radio" id="selectAnalog" name="clockwork" value="selectAnalog" onclick="setAnalog()" checked>
+            <label for="selectAnalog">Analog</label><br>
+            <input type="radio" id="selectDigital" name="clockwork" value="selectDigital" onclick="setDigital()">
+            <label for="selectDigital">Digital</label><br>
+        </div>
+        <div class="clock" id="clock">
+            <div class="number number1">1</div>
+            <div class="number number2">2</div>
+            <div class="number number3">3</div>
+            <div class="number number4">4</div>
+            <div class="number number5">5</div>
+            <div class="number number6">6</div>
+            <div class="number number7">7</div>
+            <div class="number number8">8</div>
+            <div class="number number9">9</div>
+            <div class="number number10">10</div>
+            <div class="number number11">11</div>
+            <div class="number number12">12</div>
+            <div class="hand hour" data-hour-hand></div>
+            <div class="hand minute" data-minute-hand></div>
+            <div class="hand second" data-second-hand></div>
+        </div>
+        <div class="digital" id="digital clock"></div>
 
-
+        </content>
 </body>
 
 </html>
