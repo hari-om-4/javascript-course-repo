@@ -1,9 +1,18 @@
+.header{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 35px;
+    color: yellow;
+}
 body{
-    display: flex;
-    justify-content: center;
+    background-color: gray;
+}
+.content{
+    margin-top: -200px;
+    display:flex;
+    justify-content:center;
     align-items: center;
     min-height: 100vh;
-    background-color: gray;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: x-large;
     color: white;
